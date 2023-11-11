@@ -11,7 +11,6 @@ export const EmployeeDetails = (empId) => {
         getEmployeeDetails(empId.id)
           .then(item => {
             if(mounted) {
-                console.log(item)
                 setEmployeeDetails(item)
             }
           })
@@ -47,15 +46,15 @@ export const EmployeeDetails = (empId) => {
                   <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2">
                       <p>Deduction</p>
-                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                       type="text" value={employeeDetails.deduction}/>
+                      <p className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        >{employeeDetails.deduction}</p>
                     </label>
                   </div>
                   <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2">
                       <p>Final pay</p>
-                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                       type="text" value={employeeDetails.finalPay}/>
+                      <p className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       >{employeeDetails.finalPay}</p>
                     </label>
                   </div>
                 <br />
