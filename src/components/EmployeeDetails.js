@@ -46,7 +46,7 @@ export const EmployeeDetails = (empId) => {
                 </label>
                 <br />
                 <br />
-                <button>Submit</button>
+                <button>Submit Not working</button>
               </form>
             )}
         </div>
