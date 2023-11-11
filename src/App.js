@@ -35,14 +35,18 @@ function App() {
     // </div>
     <div>
       <Router>
-        <ul>
-          <li>
-            <Link to="/">Employees</Link>
-          </li>
-          <li>
-            <Link to="/change-election">ChangeElections</Link>
-          </li>
-        </ul>
+      <nav className="flex" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li className="inline-flex items-center">
+              <Link to="/">Employees</Link>
+            </li>
+          </ol>
+          <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li className="inline-flex items-center">
+                <Link to="/change-election">ChangeElections</Link>
+            </li>
+          </ol>
+      </nav>
         <Routes>
           <Route exact path="/" Component={Employees} />
           <Route exact path="/change-election" Component={ChangeElections} />

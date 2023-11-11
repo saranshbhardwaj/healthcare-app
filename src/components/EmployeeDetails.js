@@ -19,34 +19,52 @@ export const EmployeeDetails = (empId) => {
       }, [empId])
 
     return (
-        <div>
+        <div className="w-full max-w-xs">
             <h1>Employee Detail</h1>
             {employeeDetails != null && (
-                <form>
-                <label>
-                  <p>First name</p>
-                  <input type="text" value={employeeDetails.firstName}/>
-                </label>
-                <label>
-                  <p>Last name</p>
-                  <input type="text" value={employeeDetails.lastName}/>
-                </label>
-                <label>
-                  <p>Total pay</p>
-                  <input type="text" value={employeeDetails.totalPay}/>
-                </label>
-
-                <label>
-                  <p>Deduction</p>
-                  <input type="text" value={employeeDetails.deduction}/>
-                </label>
-                <label>
-                  <p>Final pay</p>
-                  <input type="text" value={employeeDetails.finalPay}/>
-                </label>
+                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      <p>First name</p>
+                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       type="text" value={employeeDetails.firstName}/>
+                    </label>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      <p>Last name</p>
+                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       type="text" value={employeeDetails.lastName}/>
+                    </label>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      <p>Total pay</p>
+                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       type="text" value={employeeDetails.totalPay}/>
+                    </label>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      <p>Deduction</p>
+                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       type="text" value={employeeDetails.deduction}/>
+                    </label>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                      <p>Final pay</p>
+                      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       type="text" value={employeeDetails.finalPay}/>
+                    </label>
+                  </div>
                 <br />
                 <br />
-                <button>Submit Not working</button>
+                  <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Submit Not working
+                    </button>
+                </div>
               </form>
             )}
         </div>

@@ -44,55 +44,55 @@ export const Employees = () => {
 
     return (
         <div>
-            <h1>Employee page (Paycheck per month)</h1>
-            <table>
-                <thead>
+            <div className="text-3xl font-bold underline relative overflow-x-auto">Employee page (Paycheck per month)</div>
+            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Edit
                         </th>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Employee Name
                         </th>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Total play
                         </th>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Deduction
                         </th>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Final pay
                         </th>
-                        <th>
+                        <th scope="col" className="px-6 py-3">
                             Dependents
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 {list.length === 0 ? (
-            <tr>
-              <td>
-                No matching records found
-              </td>
-            </tr>
-          ) : (
-            list.map((item, index) => (
-              <tr key={index}>
-                <td>
-                    <input type="button" value="Edit" onClick={(e) => editEmployee(item.firstName)}></input>
-                </td>
-                <td>{item.firstName} {item.lastName}</td>
-                <td>{item.totalPay}</td>
-                <td>{item.deduction}</td>
-                <td>{item.finalPay}</td>
-                    {item.dependends.map((dep, indexDep) => (
-                        <td key={indexDep}> {dep.name}, </td>
-                    ))}
-              </tr>
-            ))
-          )}
+                  <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <td className="px-6 py-4">
+                      No matching records found
+                    </td>
+                  </tr>
+                ) : (
+                  list.map((item, index) => (
+                    <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <td className="px-6 py-4">
+                          <input type="button" value="Edit" onClick={(e) => editEmployee(item.firstName)}></input>
+                      </td>
+                      <td className="px-6 py-4">{item.firstName} {item.lastName}</td>
+                      <td className="px-6 py-4">{item.totalPay}</td>
+                      <td className="px-6 py-4">{item.deduction}</td>
+                      <td className="px-6 py-4">{item.finalPay}</td>
+                          {item.dependends.map((dep, indexDep) => (
+                              <td className="px-6 py-4" key={indexDep}> {dep.name}, </td>
+                          ))}
+                    </tr>
+                  ))
+                )}
                 </tbody>
-            </table>
+        </table>
      {showEmployeeDetail && (
         <EmployeeDetails id={selectedEmployee} />
      )}
