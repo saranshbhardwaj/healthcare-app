@@ -26,6 +26,9 @@ export const Employees = () => {
                 let calculatedData = items
                 calculatedData.forEach(data => {
                    data.deduction = ((1000/26) + (data.dependends.length * 500/26)).toFixed(2)
+                   if(data.firstName.toLocaleLowerCase().charAt(0) == 'a'){
+                    data.deduction = (data.deduction * 9/10).toFixed(2); // 10% off
+                   }
                    data.finalPay = (data.totalPay - data.deduction).toFixed(2)
                 })
               setList(calculatedData)

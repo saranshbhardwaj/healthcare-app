@@ -51,4 +51,16 @@ const employeesData = [
             }
         ]
     },
+    {
+        firstName: "Aaron",
+        lastName: "Doe",
+        totalPay: 2000,
+        deduction: 0,
+        finalPay: 0,
+        dependends: [
+            {
+                name: "Aaron dependent"
+            }
+        ]
+    },
 ]
