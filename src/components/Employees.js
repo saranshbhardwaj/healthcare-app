@@ -4,7 +4,7 @@ import { EmployeeDetails } from "./EmployeeDetails";
 
 
 // No need for Redux pattern
-// The app is not big enough to intruduce redux layer
+// The app is not big enough to intruduce redux
 export const Employees = () => {
     // Get the employee list at the page load
     // The page will be visible to admins. As, it will have information of all the employees
